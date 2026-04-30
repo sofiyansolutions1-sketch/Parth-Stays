@@ -10,7 +10,7 @@ export const PG_DATA: PG[] = [
     description: 'Our most premium private living experience in Jaipur. Ideal for students who need a quiet, focused environment for exams (Next IAS, Mothers).',
     amenities: ['Wifi', 'RO', 'Food', 'Security Camera', 'AC'],
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800',
+    image: 'https://i.postimg.cc/DwvwRDQK/Chat-GPT-Image-May-1-2026-01-51-52-AM.png',
   },
   {
     id: '2',
@@ -21,7 +21,7 @@ export const PG_DATA: PG[] = [
     description: 'Perfectly balanced shared living. Located in Jaipur\'s education hub, offering premium home-cooked food and chilled water facilities.',
     amenities: ['Wifi', 'Food', 'RO', 'Water cooler', 'In house shop'],
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1555854817-5b2337a755df?auto=format&fit=crop&q=80&w=800',
+    image: 'https://i.postimg.cc/DZt6m1fm/Chat-GPT-Image-May-1-2026-01-18-36-AM.png',
   },
   {
     id: '3',
@@ -32,7 +32,7 @@ export const PG_DATA: PG[] = [
     description: 'Affordable and essential student living. The best value PG in Sudama Nagar, Jaipur for coaching aspirants on a budget.',
     amenities: ['Wifi', 'RO', 'Food', 'Security Camera', 'Newspaper'],
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80&w=800',
+    image: 'https://i.postimg.cc/63nK8LVG/Chat-GPT-Image-May-1-2026-01-53-59-AM.png',
   },
 ];
 
