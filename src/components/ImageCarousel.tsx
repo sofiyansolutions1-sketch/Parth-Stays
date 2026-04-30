@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const images = [
-  'https://iili.io/BPytydl.jpg',
-  'https://iili.io/BPyDzmP.jpg',
-  'https://iili.io/BPyDUQe.jpg',
+  'https://i.postimg.cc/pdW6tQr1/Chat-GPT-Image-May-1-2026-01-19-36-AM.png',
+  'https://i.postimg.cc/nzMSXHvP/Chat-GPT-Image-May-1-2026-01-19-32-AM.png',
+  'https://i.postimg.cc/DZt6m1fm/Chat-GPT-Image-May-1-2026-01-18-36-AM.png',
+  'https://i.postimg.cc/bYtLWVLx/Chat-GPT-Image-May-1-2026-01-18-47-AM.png',
 ];
 
 export const ImageCarousel = () => {
@@ -18,7 +19,7 @@ export const ImageCarousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden rounded-b-[3rem] md:rounded-b-[5rem] shadow-2xl" id="image-carousel">
+    <div className="relative w-full h-[50vh] md:h-[70vh] overflow-hidden rounded-b-[3rem] md:rounded-b-[5rem] shadow-2xl" id="image-carousel">
       <AnimatePresence mode="wait">
         <motion.img
           key={index}

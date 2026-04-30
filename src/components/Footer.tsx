@@ -42,7 +42,10 @@ export const Footer = () => {
           <h4 className="text-xs font-bold uppercase tracking-widest text-stone-900 mb-6" id="contact-footer-label">Stay Connected</h4>
           <div className="space-y-4" id="footer-contact-info">
              <p className="text-sm text-stone-500" id="footer-contact-email">{CONTACT_INFO.email}</p>
-             <p className="text-sm text-stone-500" id="footer-contact-phone">{CONTACT_INFO.phone}</p>
+             <div className="space-y-1 text-sm text-stone-500">
+               <p id="footer-contact-phone-1">{CONTACT_INFO.phone}</p>
+               <p id="footer-contact-phone-2">{CONTACT_INFO.altPhone}</p>
+             </div>
              <p className="text-[10px] text-stone-400 leading-tight">{CONTACT_INFO.address}</p>
           </div>
         </div>

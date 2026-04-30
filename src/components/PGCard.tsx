@@ -40,10 +40,7 @@ export const PGCard: React.FC<PGCardProps> = ({ pg, onInquire }) => {
           referrerPolicy="no-referrer"
           id={`pg-img-${pg.id}`}
         />
-        <div className="absolute top-4 left-4 flex gap-2" id={`pg-tags-${pg.id}`}>
-          <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-[10px] font-bold uppercase tracking-widest text-stone-800 rounded-full shadow-sm" id={`pg-type-${pg.id}`}>
-            {pg.type}
-          </span>
+        <div className="absolute top-4 left-4" id={`pg-tags-${pg.id}`}>
           <span className="px-3 py-1 bg-stone-800/90 backdrop-blur-sm text-[10px] font-bold uppercase tracking-widest text-white rounded-full shadow-sm" id={`pg-rating-${pg.id}`}>
             <div className="flex items-center gap-1">
               <Star size={10} fill="currentColor" />

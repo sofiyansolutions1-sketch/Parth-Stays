@@ -40,7 +40,7 @@ export const CONTACT_INFO = {
   phone: '8696912504',
   altPhone: '7014840889',
   whatsapp: '918696912504',
-  email: 'GHANSHYAMSAINI992@GMAIL.COM',
+  email: 'ghanshyamsaini992@gmail.com',
   address: 'Plot 46, Sudama Nagar, Opposite Glass Factory, Mansighpura, Tonk Road Jaipur - 302018',
 };
 

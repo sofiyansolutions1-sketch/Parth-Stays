@@ -3,6 +3,20 @@ import { motion } from 'motion/react';
 import { PG_DATA } from '../constants';
 import { PGCard } from '../components/PGCard';
 import { ImageCarousel } from '../components/ImageCarousel';
+
+const GALLERY_IMAGES = [
+  "https://i.postimg.cc/pV4QWVhM/Chat-GPT-Image-May-1-2026-01-19-17-AM.png",
+  "https://i.postimg.cc/jqLB5hXm/Chat-GPT-Image-May-1-2026-01-19-12-AM.png",
+  "https://i.postimg.cc/MKB40Khw/Chat-GPT-Image-May-1-2026-01-19-45-AM.png",
+  "https://i.postimg.cc/T39tQy0z/Chat-GPT-Image-May-1-2026-01-18-29-AM.png",
+  "https://i.postimg.cc/pdW6tQr1/Chat-GPT-Image-May-1-2026-01-19-36-AM.png",
+  "https://i.postimg.cc/nzMSXHvP/Chat-GPT-Image-May-1-2026-01-19-32-AM.png",
+  "https://i.postimg.cc/nVjwZhVV/Chat-GPT-Image-May-1-2026-01-19-03-AM.png",
+  "https://i.postimg.cc/DZt6m1fm/Chat-GPT-Image-May-1-2026-01-18-36-AM.png",
+  "https://i.postimg.cc/xdptDWW5/Chat-GPT-Image-May-1-2026-01-18-41-AM.png",
+  "https://i.postimg.cc/bYtLWVLx/Chat-GPT-Image-May-1-2026-01-18-47-AM.png"
+];
+
 import { 
   ArrowRight, 
   Star, 
@@ -142,26 +156,12 @@ export const Home: React.FC<HomeProps> = ({ onInquire }) => {
         </div>
       </section>
 
-      {/* Listings Section - Mobile Optimized Cards */}
       <section className="px-6 md:px-4" id="browse-listings">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-8" id="listings-header">
             <div>
               <h2 className="text-3xl font-serif font-medium text-stone-900 mb-4" id="listings-title">Explore Residences</h2>
               <p className="text-stone-500" id="listings-subtitle">Curated picks for every budget and taste.</p>
-            </div>
-            <div className="flex gap-2 pb-2 overflow-x-auto no-scrollbar scroll-smooth" id="listings-filter">
-              {['All', 'Boys', 'Girls', 'Co-living'].map((l) => (
-                <button
-                  key={l}
-                  className={`flex-none px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all border ${
-                    l === 'All' ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-stone-500 border-stone-100 hover:border-stone-300 shadow-sm'
-                  }`}
-                  id={`filter-${l}`}
-                >
-                  {l}
-                </button>
-              ))}
             </div>
           </div>
           
@@ -170,6 +170,58 @@ export const Home: React.FC<HomeProps> = ({ onInquire }) => {
               <PGCard key={pg.id} pg={pg} onInquire={onInquire} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Auto-scrolling Gallery Section */}
+      <section className="py-12 md:py-24 overflow-hidden bg-stone-50/50" id="gallery-section">
+        <div className="max-w-7xl mx-auto px-6 mb-12">
+          <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-4">Our Gallery</h2>
+          <p className="text-stone-500">A glimpse into the life at Parth Stays Sudama Nagar, Jaipur.</p>
+        </div>
+
+        <div className="space-y-4 md:space-y-8">
+          {[
+            { dir: -1, images: [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5], speed: 30 },
+            { dir: 1, images: [6, 7, 8, 9, 0, 1, 6, 7, 8, 9, 0, 1], speed: 40 },
+            { dir: -1, images: [2, 4, 6, 8, 1, 3, 2, 4, 6, 8, 1, 3], speed: 35 }
+          ].map((row, rowIndex) => (
+            <div key={rowIndex} className="flex relative overflow-hidden h-[200px] md:h-[300px]">
+              <motion.div
+                animate={{
+                  x: row.dir === -1 ? [0, -100 * row.images.length] : [-100 * row.images.length, 0],
+                }}
+                transition={{
+                  duration: row.speed,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="flex gap-4 md:gap-8 absolute whitespace-nowrap will-change-transform"
+              >
+                {row.images.map((imgIdx, i) => (
+                  <div key={i} className="w-[300px] md:w-[450px] h-full shrink-0">
+                    <img
+                      src={GALLERY_IMAGES[imgIdx % GALLERY_IMAGES.length]}
+                      alt={`Gallery ${i}`}
+                      className="w-full h-full object-cover rounded-2xl md:rounded-[2rem] shadow-sm"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                ))}
+                {/* Duplicated for seamless loop */}
+                {row.images.map((imgIdx, i) => (
+                  <div key={`dup-${i}`} className="w-[300px] md:w-[450px] h-full shrink-0">
+                    <img
+                      src={GALLERY_IMAGES[imgIdx % GALLERY_IMAGES.length]}
+                      alt={`Gallery dup ${i}`}
+                      className="w-full h-full object-cover rounded-2xl md:rounded-[2rem] shadow-sm"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -269,6 +321,35 @@ export const Home: React.FC<HomeProps> = ({ onInquire }) => {
                <img src="https://iili.io/BPyDUQe.jpg" className="w-full aspect-[4/5] object-cover rounded-3xl shadow-xl" alt="Parth Stays Life" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Manager's Spotlight */}
+      <section className="px-6 md:px-4" id="manager-spotlight">
+        <div className="max-w-7xl mx-auto py-16 md:py-32 border-t border-stone-100">
+           <div className="flex flex-col md:flex-row gap-16 items-center">
+              <div className="w-full md:w-1/3">
+                 <div className="aspect-square rounded-[3rem] md:rounded-[4rem] overflow-hidden shadow-2xl rotate-3">
+                    <img src="https://i.postimg.cc/T39tQy0z/Chat-GPT-Image-May-1-2026-01-18-29-AM.png" alt="Parth Saini" className="w-full h-full object-cover -rotate-3 scale-110" />
+                 </div>
+              </div>
+              <div className="w-full md:w-2/3 space-y-6">
+                 <div className="inline-block px-4 py-1 bg-stone-900 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.3em]">The Man Behind the Part</div>
+                 <h2 className="text-3xl md:text-5xl font-serif text-stone-900 leading-tight">Driven by Passion, <br/>Defined by Speed.</h2>
+                 <div className="space-y-4">
+                   <p className="text-stone-500 text-lg md:text-xl leading-relaxed italic border-l-4 border-stone-200 pl-6">
+                     "This 20-year-old man has a unique condition. He's a Big Boss fan, and he's really fast."
+                   </p>
+                   <p className="text-stone-400 text-sm md:text-base pl-6">
+                     He has a few things that are a little different. He has a few things that are a little different.
+                   </p>
+                 </div>
+                 <div className="flex items-center gap-4 pt-4">
+                    <div className="h-px w-12 bg-stone-300"></div>
+                    <span className="font-serif font-medium text-stone-900">Parth Saini, Founder</span>
+                 </div>
+              </div>
+           </div>
         </div>
       </section>
 
