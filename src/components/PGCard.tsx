@@ -61,13 +61,19 @@ export const PGCard: React.FC<PGCardProps> = ({ pg, onInquire }) => {
           <span id={`pg-location-${pg.id}`}>{pg.location}</span>
         </div>
         
-        <div className="flex flex-wrap gap-2 mb-6" id={`pg-amenities-${pg.id}`}>
+        <div className="flex flex-wrap gap-2 mb-4" id={`pg-amenities-${pg.id}`}>
           {pg.amenities.map((amenity) => (
             <span key={amenity} className="flex items-center gap-1 px-3 py-1.5 bg-stone-50 text-stone-600 text-[11px] font-medium rounded-lg border border-stone-100" id={`amenity-${pg.id}-${amenity}`}>
               {amenityIcons[amenity] || null}
               {amenity}
             </span>
           ))}
+        </div>
+        
+        <div className="bg-stone-50 border border-stone-100 rounded-lg p-3 mb-6">
+          <p className="text-[11px] text-stone-600 leading-relaxed">
+            <span className="font-semibold text-stone-800">Note:</span> Light bill extra charge, ₹11 per unit, and security refundable amount as per room ₹500 to ₹4000.
+          </p>
         </div>
         
         <motion.button

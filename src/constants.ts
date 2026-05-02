@@ -3,7 +3,7 @@ import { PG } from './types';
 export const PG_DATA: PG[] = [
   {
     id: '1',
-    name: 'Parth Stays Single Seater Suite',
+    name: 'Parth Stays Single Seater Room',
     type: 'Co-living',
     price: '₹6,500 - ₹10,000/mo',
     location: 'Sudama Nagar, Tonk Road, Jaipur',
@@ -14,7 +14,7 @@ export const PG_DATA: PG[] = [
   },
   {
     id: '2',
-    name: 'Parth Stays 2-Seater Comfort',
+    name: 'Parth Stays Double Seater Room',
     type: 'Co-living',
     price: '₹5,300 - ₹7,500/mo',
     location: 'Sudama Nagar, Mansighpura, Jaipur',
@@ -25,7 +25,7 @@ export const PG_DATA: PG[] = [
   },
   {
     id: '3',
-    name: 'Parth Stays 3-Seater Essential',
+    name: 'Parth Stays Triple Seater Room',
     type: 'Co-living',
     price: '₹5,000 - ₹6,500/mo',
     location: 'Sudama Nagar, Gopalpura, Jaipur',

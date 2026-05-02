@@ -13,6 +13,7 @@ export interface PG {
 export interface InquiryFormData {
   name: string;
   phone: string;
-  pgName: string;
+  pgProperty: string;
+  roomCategory: string;
   message: string;
 }
