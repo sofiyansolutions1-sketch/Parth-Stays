@@ -179,21 +179,38 @@ export const Home: React.FC<HomeProps> = ({ onInquire }) => {
 
       {/* PS2 Variant and Location Wrapper */}
       <div className="space-y-0 relative">
+        {/* Section Header for Second Location */}
+        <div className="max-w-7xl mx-auto px-6 pt-24 pb-4">
+          <div className="flex items-center gap-4 mb-4 text-center">
+            <div className="h-px bg-stone-200 flex-grow"></div>
+            <span className="text-[10px] md:text-xs font-bold text-stone-400 uppercase tracking-[0.3em] whitespace-nowrap px-4">Explore Our Second Location</span>
+            <div className="h-px bg-stone-200 flex-grow"></div>
+          </div>
+        </div>
+
         {/* PS2 Variant Section */}
-        <section className="px-6 md:px-4 pt-20 pb-6 bg-white" id="ps2-variant">
+        <section className="px-6 md:px-4 pt-4 pb-6 bg-white" id="ps2-variant">
         <div className="max-w-7xl mx-auto">
           <div className="bg-stone-100/80 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-sm flex flex-col md:flex-row-reverse border border-stone-200">
             <div className="w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center relative">
               <div className="absolute top-0 right-0 p-8 opacity-5 font-serif font-bold text-[180px] leading-none pointer-events-none">
                 PS2
               </div>
-              <div className="inline-block px-4 py-1.5 bg-stone-900 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.2em] w-fit mb-6 relative z-10">
-                Newly Added
+              <div className="flex items-center gap-3 mb-6 relative z-10">
+                <div className="px-4 py-1.5 bg-stone-900 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.2em] w-fit">
+                  Location 02
+                </div>
+                <div className="px-4 py-1.5 bg-stone-100 text-stone-600 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] w-fit border border-stone-200">
+                  Newly Added
+                </div>
               </div>
               
               <div className="relative z-10 mb-8">
-                <h2 className="text-4xl md:text-6xl font-serif text-stone-900 mb-3 tracking-tight">PS2</h2>
-                <h3 className="text-xl md:text-2xl text-stone-600 font-medium font-serif italic">Our Second Residence in the Same Location</h3>
+                <h2 className="text-4xl md:text-6xl font-serif text-stone-900 mb-3 tracking-tight">Parth Stays 2 (PS2)</h2>
+                <h3 className="text-xl md:text-2xl text-stone-600 font-medium font-serif italic">Our Second Premium PG Location in Jaipur</h3>
+                <p className="text-stone-500 mt-4 text-sm leading-relaxed max-w-md">
+                  Experience the same premium quality and community spirit at our brand new property, PS2. Located just steps away from our main residency.
+                </p>
               </div>
 
               <a 
@@ -266,7 +283,8 @@ export const Home: React.FC<HomeProps> = ({ onInquire }) => {
         <div className="max-w-7xl mx-auto bg-stone-50 rounded-[2rem] md:rounded-[3xl] p-6 md:p-10 shadow-sm border border-stone-200 flex flex-col md:flex-row gap-10 items-center">
           <div className="w-full md:w-1/3 flex flex-col space-y-6">
             <div>
-              <h2 className="text-3xl font-serif text-stone-900 mb-4">Find PS2</h2>
+              <div className="text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-2">Location 02</div>
+              <h2 className="text-3xl font-serif text-stone-900 mb-4">Find Our Second Residence (PS2)</h2>
               <div className="flex items-start gap-3 mt-4">
                 <MapPin className="text-stone-400 mt-1 shrink-0" size={20} />
                 <p className="text-stone-600 font-medium leading-relaxed">
