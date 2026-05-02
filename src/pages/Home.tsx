@@ -214,7 +214,7 @@ export const Home: React.FC<HomeProps> = ({ onInquire }) => {
               </div>
 
               <a 
-                href="https://www.google.com/maps/search/Shape+and+Fitness+Gym/@26.870303,75.7947553,626m/data=!3m1!1e3?hl=en&entry=ttu"
+                href="https://www.google.com/maps/place/26%C2%B052'12.9%22N+75%C2%B047'40.3%22E/@26.8707869,75.7930938,626m/data=!3m1!1e3!4m4!3m3!8m2!3d26.870251!4d75.7945207?hl=en&entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 bg-white rounded-2xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.05)] border border-stone-100/80 w-fit mb-8 relative z-10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-0.5 transition-all group"
@@ -264,15 +264,23 @@ export const Home: React.FC<HomeProps> = ({ onInquire }) => {
               </div>
             </div>
             <div className="w-full md:w-1/2 p-4 md:p-6">
-              <div className="w-full h-[400px] md:h-full min-h-[500px] rounded-[2rem] overflow-hidden relative shadow-lg">
-                <img src="https://iili.io/BLfcAXV.png" alt="PS2 Property Entrance" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <a 
+                href="https://www.google.com/maps/place/26%C2%B052'12.9%22N+75%C2%B047'40.3%22E/@26.8707869,75.7930938,626m/data=!3m1!1e3!4m4!3m3!8m2!3d26.870251!4d75.7945207?hl=en&entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full h-[400px] md:h-full min-h-[500px] rounded-[2rem] overflow-hidden relative shadow-lg group/img transition-all duration-500"
+              >
+                <img src="https://iili.io/BLfcAXV.png" alt="PS2 Property Entrance" className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover/img:opacity-80 transition-opacity"></div>
                 <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
-                  <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-stone-900 uppercase tracking-wider">
-                    PS2 Campus
+                  <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-bold text-stone-900 uppercase tracking-widest shadow-sm">
+                    Open in Google Maps
                   </span>
+                  <div className="w-10 h-10 rounded-full bg-stone-900/50 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 group-hover/img:bg-white group-hover/img:text-stone-900 transition-all">
+                    <MapPin size={18} />
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -293,7 +301,7 @@ export const Home: React.FC<HomeProps> = ({ onInquire }) => {
               </div>
             </div>
             <a 
-              href="https://www.google.com/maps/search/Shape+and+Fitness+Gym/@26.870303,75.7947553,626m/data=!3m1!1e3?hl=en&entry=ttu"
+              href="https://www.google.com/maps/place/26%C2%B052'12.9%22N+75%C2%B047'40.3%22E/@26.8707869,75.7930938,626m/data=!3m1!1e3!4m4!3m3!8m2!3d26.870251!4d75.7945207?hl=en&entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-stone-900 text-white rounded-xl font-medium shadow-md hover:bg-stone-800 transition-colors w-fit"
@@ -303,7 +311,7 @@ export const Home: React.FC<HomeProps> = ({ onInquire }) => {
           </div>
           <div className="w-full md:w-2/3 h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-inner border border-stone-200">
             <iframe 
-              src="https://maps.google.com/maps?q=26.870303,75.7947553&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=26.870251,75.7945207&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
@@ -426,7 +434,7 @@ export const Home: React.FC<HomeProps> = ({ onInquire }) => {
               <h3 className="text-2xl md:text-3xl font-serif text-stone-900">Coaching Hubs in Jaipur</h3>
               <p className="text-stone-500">Parth Stays is within walking distance to several premier coaching institutes on Tonk Road.</p>
               <div className="grid grid-cols-2 gap-3">
-                {['NEXT IAS', 'Mothers Coaching', 'WS Cube', 'VIPM', 'Para Mount', 'Zone Tech', 'Drithee Coaching', 'Harendra Coaching'].map((hub) => (
+                {['Drishti IAS', 'Narendra Classes', 'IIM Coaching', 'Kalam Academy', 'Harendra classes', 'Paramount'].map((hub) => (
                   <div key={hub} className="flex items-center gap-2 text-sm text-stone-600">
                     <div className="w-1.5 h-1.5 rounded-full bg-stone-400" />
                     {hub}
