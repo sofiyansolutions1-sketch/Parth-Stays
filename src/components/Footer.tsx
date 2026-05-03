@@ -46,7 +46,16 @@ export const Footer = () => {
                <p id="footer-contact-phone-1">{CONTACT_INFO.phone}</p>
                <p id="footer-contact-phone-2">{CONTACT_INFO.altPhone}</p>
              </div>
-             <p className="text-[10px] text-stone-400 leading-tight">{CONTACT_INFO.address}</p>
+             <div className="space-y-2">
+               <p className="text-[10px] text-stone-400 leading-tight">
+                 <span className="font-bold text-stone-500 block mb-0.5 uppercase tracking-[0.1em]">PS1 Campus</span>
+                 {CONTACT_INFO.address}
+               </p>
+               <p className="text-[10px] text-stone-400 leading-tight">
+                 <span className="font-bold text-stone-500 block mb-0.5 uppercase tracking-[0.1em]">PS2 Campus</span>
+                 {CONTACT_INFO.address2}
+               </p>
+             </div>
           </div>
         </div>
       </div>

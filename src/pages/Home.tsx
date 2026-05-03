@@ -432,9 +432,9 @@ export const Home: React.FC<HomeProps> = ({ onInquire }) => {
             </div>
             <div className="space-y-6">
               <h3 className="text-2xl md:text-3xl font-serif text-stone-900">Coaching Hubs in Jaipur</h3>
-              <p className="text-stone-500">Parth Stays is within walking distance to several premier coaching institutes on Tonk Road.</p>
+              <p className="text-stone-500">Parth Stays is within walking distance to several premier coaching institutes on Tonk Road and Gopalpura Location.</p>
               <div className="grid grid-cols-2 gap-3">
-                {['Drishti IAS', 'Narendra Classes', 'IIM Coaching', 'Kalam Academy', 'Harendra classes', 'Paramount'].map((hub) => (
+                {['Drishti IAS', 'NEXT IAS Coaching', 'Mothers Coaching', 'WS Cube Coaching', 'Harendra Coaching', 'Paramount', 'IIM Coaching', 'Kalam Academy', 'VIPM', 'Zone Tech Coaching', 'Narendra Classes'].map((hub) => (
                   <div key={hub} className="flex items-center gap-2 text-sm text-stone-600">
                     <div className="w-1.5 h-1.5 rounded-full bg-stone-400" />
                     {hub}

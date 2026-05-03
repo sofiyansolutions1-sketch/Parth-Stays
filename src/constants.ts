@@ -42,6 +42,7 @@ export const CONTACT_INFO = {
   whatsapp: '918696912504',
   email: 'ghanshyamsaini992@gmail.com',
   address: 'Plot 46, Sudama Nagar, Opposite Glass Factory, Mansighpura, Tonk Road Jaipur - 302018',
+  address2: 'Plot 01, Dayanand Colony, Opposite Glass Factory, Mansighpura, Tonk Road Jaipur - 302018',
 };
 
 export const COACHING_HUBS = [
